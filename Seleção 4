@@ -7,23 +7,26 @@ func main() {
 
 	fmt.Print("Digite seu peso (em kg): ")
 	fmt.Scan(&peso)
+
 	fmt.Print("Digite sua altura (em metros): ")
 	fmt.Scan(&altura)
-
-	imc := peso / (altura * altura)
-
-	fmt.Printf("Seu IMC é:", imc)
 
 	var sexo string
 	fmt.Print("Qual o seu ?")
 	fmt.Scan(&sexo)
+
+	imc := peso / (altura * altura)
+
+	fmt.Printf("Seu IMC é: %.2f\n", imc)
+
 	switch sexo {
 	case "masculino":
 		if imc >= 18.5 && imc <= 24.99 {
 			fmt.Print("Esta no peso imc ideal!")
-		} else if imc < 18.5 && imc > 24.99 {
-			fmt.Print("Esta fora do peso ideal")
+		} else if imc <= 18.4 && imc >= 25 {
+			fmt.Print("Não esta no peso ideal!")
 		}
+
 	case "feminino":
 		if imc >= 18 && imc <= 24 {
 			fmt.Print("Esta no peso ideal!")
@@ -31,5 +34,4 @@ func main() {
 			fmt.Print("Esta fora do peso ideal")
 		}
 	}
-
 }
