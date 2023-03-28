@@ -1,0 +1,14 @@
+package main
+
+import "fmt"
+
+func main() {
+	numeros := [6]float64{6, 7.5, 2.3, 5.2, 3, 8}
+
+	soma := 0.0
+	for _, numeros := range numeros {
+		soma += numeros
+	}
+	media := soma / float64(len(numeros))
+	fmt.Printf("A media dos numeros é %.2f", media)
+}
