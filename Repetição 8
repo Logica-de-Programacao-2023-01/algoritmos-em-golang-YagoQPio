@@ -1,0 +1,15 @@
+package main
+
+import "fmt"
+
+func main() {
+	var X int
+	
+	fmt.Print("Digite um numero")
+	fmt.Scan(&X)
+	for i := 1; i<= X; i++{
+		if X%i == {
+			fmt.Println(i)
+		}
+	}
+}
